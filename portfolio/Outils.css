@@ -1,0 +1,225 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('a21c90392c3bb2b7e33c9e78eabebb48.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Hide scrollbar */
+}
+
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    max-height: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Enable scrolling within the container */
+    scrollbar-width: none; /* Firefox */
+}
+
+.container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li button:hover {
+    color: grey;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropdown-btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Position directly below the button */
+    left: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown .dropdown-content a:hover {
+    color: grey;
+    background-color: #f1f1f1;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    max-width: 50%;
+}
+
+.info h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.info p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.info .handle {
+    font-size: 1em;
+    color: gray;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.image img {
+    max-width: 100%;
+    border-radius: 10px;
+    max-height: 350px;
+}
+
+.competence-list {
+    margin-left: 11.5%;
+    list-style: none;
+    padding: 0;
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 20px; /* Space between items */
+}
+
+.competence-list li {
+    margin-bottom: 0; /* Remove margin-bottom for individual items */
+    padding: 25px; /* Increase padding for larger containers */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    min-width: 150px; /* Set a minimum width for larger appearance */
+    text-align: center; /* Center text inside the item */
+}
+
+.competence-list h3 {
+    font-size: 1.2em;
+    margin: 0 0 10px;
+    color: grey;
+}
+
+.competence-list p {
+    font-size: 0.9em; /* Adjust the font size for descriptions */
+    color: black;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .image img {
+        max-height: none;
+        margin-top: 20px;
+    }
+
+    .competence-list {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+}
+
+h2 {
+    color: grey;
+    margin-top: auto;
+}
+
+.centered {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text within the paragraph */
+}
+
+.centered img {
+    margin-right: 10px; /* Adjust as needed to create space between image and text */
+}
+
+nav ul li button.active {
+    background-color: #ccc; /* Change background color */
+    color: white; /* Change text color */
+}
